@@ -1,0 +1,24 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *)); /*	sẽ	dùng	ở	buổi	3	*/
+@theme {
+  --color-brand-50: #fcf4f4;
+  --color-brand-100: #f9eaea;
+  --color-brand-600: #ae424f;
+  --color-brand-700: #9a3645;
+  --color-brand-900: #702b39;
+
+  --color-accent-300: #b2c8de;
+  --color-accent-400: #8dabcd;
+  --color-accent-500: #7291bf;
+
+  --color-ink: #12211d;
+  --color-muted: #5c6f69;
+  --color-line: #dfe6e2;
+  --color-surface: #ffffff;
+
+  --font-display: "Be Vietnam Pro", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+
+  --radius-card: 0.875rem;
+  --radius-pill: 999px;
+}
