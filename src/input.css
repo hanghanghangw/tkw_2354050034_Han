@@ -22,3 +22,16 @@
   --radius-card: 0.875rem;
   --radius-pill: 999px;
 }
+
+@layer components {
+  .section {
+    @apply mx-auto w-full max-w-6xl px-5 py-20 lg:py-28;
+  }
+  .btn {
+    @apply inline-flex	items-center	justify-center	gap-2	rounded-pill
+														px-5	py-2.5	text-sm	font-semibold	transition-colors;
+  }
+  .btn-primary {
+    @apply bg-brand-600	text-white	hover:bg-brand-700;
+  }
+}
