@@ -34,4 +34,18 @@
   .btn-primary {
     @apply bg-brand-600	text-white	hover:bg-brand-700;
   }
+
+  .btn-ghost {
+    @apply border border-line text-ink hover:bg-surface;
+  }
+  .btn-lg {
+    @apply px-7 py-3.5 text-base;
+  }
+
+  .card {
+    @apply rounded-card border border-line bg-surface p-6;
+  }
+  .badge {
+    @apply inline-flex items-center gap-1.5 rounded-pill px-3 py-1 text-xs font-semibold;
+  }
 }
