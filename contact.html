@@ -50,10 +50,24 @@
         </div>
       </div>
 
-      <form class="card" action="#" method="post">
+      <form class="card border-2 border-line shadow-md" action="#" method="post">
+        <p class="mb-6 text-sm text-muted">
+          Các trường có dấu <span class="text-red-600" aria-hidden="true">*</span>
+          là bắt buộc.
+        </p>
+
         <div>
           <label class="field-label" for="ho-ten">Họ và tên <span class="text-red-600" aria-hidden="true">*</span></label>
-          <input class="field-input" id="ho-ten" name="hoTen" type="text" required autocomplete="name" />
+          <input
+            class="field-input"
+            id="ho-ten"
+            name="hoTen"
+            type="text"
+            required
+            autocomplete="name"
+            aria-describedby="ho-ten-error"
+          />
+          <p class="field-error" id="ho-ten-error" role="alert"></p>
         </div>
 
         <div class="mt-5">
@@ -77,28 +91,63 @@
 
         <div class="mt-5">
           <label class="field-label" for="email">Email <span class="text-red-600" aria-hidden="true">*</span></label>
-          <input class="field-input" id="email" name="email" type="email" required autocomplete="email" />
+          <input
+            class="field-input"
+            id="email"
+            name="email"
+            type="email"
+            required
+            autocomplete="email"
+            aria-describedby="email-hint email-error"
+          />
+          <p class="mt-1.5 text-xs text-muted" id="email-hint">
+            Ví dụ: ban@example.com
+          </p>
+          <p class="field-error" id="email-error" role="alert"></p>
         </div>
 
         <div class="mt-5">
           <label class="field-label" for="muc-tieu">Mục tiêu TOEIC</label>
-          <select class="field-input" id="muc-tieu" name="mucTieu">
+          <select class="field-input" id="muc-tieu" name="mucTieu" aria-describedby="muc-tieu-hint">
             <option value="">Chọn mục tiêu</option>
             <option value="550">550+</option>
             <option value="750">750+</option>
             <option value="850">850+</option>
             <option value="900">900+</option>
           </select>
+          <p class="mt-1.5 text-xs text-muted" id="muc-tieu-hint">
+            Chọn mức điểm bạn muốn hướng tới.
+          </p>
         </div>
 
         <div class="mt-5">
           <label class="field-label" for="noi-dung">Nội dung cần tư vấn</label>
-          <textarea class="field-input min-h-32" id="noi-dung" name="noiDung"></textarea>
+          <textarea
+            class="field-input min-h-32"
+            id="noi-dung"
+            name="noiDung"
+            aria-describedby="noi-dung-hint"
+          ></textarea>
+          <p class="mt-1.5 text-xs text-muted" id="noi-dung-hint">
+            Có thể ghi trình độ hiện tại, thời gian dự kiến thi hoặc khó khăn đang gặp.
+          </p>
         </div>
 
         <div class="mt-5 flex items-start gap-3">
-          <input id="dong-y" name="dongY" type="checkbox" required class="mt-1 h-4 w-4 accent-brand-600" />
-          <label for="dong-y" class="text-sm text-muted">Tôi đồng ý để TOEIC Mastery liên hệ tư vấn.</label>
+          <input
+            id="dong-y"
+            name="dongY"
+            type="checkbox"
+            required
+            class="mt-0.5 h-5 w-5 shrink-0 accent-brand-600"
+            aria-describedby="dong-y-error"
+          />
+          <div>
+            <label for="dong-y" class="text-sm text-muted">
+              Tôi đồng ý để TOEIC Mastery liên hệ tư vấn.
+            </label>
+            <p class="field-error" id="dong-y-error" role="alert"></p>
+          </div>
         </div>
 
         <button class="btn btn-primary mt-6 w-full" type="submit">Gửi thông tin</button>
