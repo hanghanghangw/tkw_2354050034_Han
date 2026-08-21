@@ -28,7 +28,7 @@
 
         <!-- Desktop navigation -->
         <div
-          class="hidden md:flex items-center gap-[28px] text-[14px] font-medium text-ink"
+          class="hidden lg:flex items-center gap-[28px] text-[14px] font-medium text-ink"
         >
           <a href="#courses" class="hover:text-brand-600 transition">
             Courses
@@ -50,7 +50,7 @@
         </div>
 
         <!-- Right -->
-        <div class="hidden md:flex items-center gap-[18px]">
+        <div class="hidden lg:flex items-center gap-[18px]">
           <button
             class="text-[14px] font-medium text-ink hover:text-brand-600 transition"
           >
@@ -66,7 +66,7 @@
         </div>
 
         <!-- Mobile -->
-        <button class="md:hidden text-ink text-[24px]" aria-label="Open menu">
+        <button class="lg:hidden text-ink text-[24px]" aria-label="Open menu">
           ☰
         </button>
       </nav>
@@ -422,6 +422,53 @@
           <a href="#" class="btn btn-ghost mt-auto">Chọn gói này</a>
         </li>
       </ul>
+
+      <!-- Bảng so sánh: giữ nhiều cột và cho cuộn ngang trên màn hình nhỏ -->
+      <div class="mt-12">
+        <h3 class="font-display text-2xl font-bold text-ink">So sánh nhanh các gói</h3>
+        <p class="mt-2 text-sm text-muted lg:hidden">
+          Vuốt ngang để xem hết bảng.
+        </p>
+
+        <div class="mt-5 overflow-x-auto">
+          <table class="w-full min-w-[720px] border-collapse text-left text-sm">
+            <thead>
+              <tr class="border-b border-line bg-brand-50">
+                <th class="p-4 font-semibold text-ink">Tính năng</th>
+                <th class="p-4 font-semibold text-ink">Cơ bản</th>
+                <th class="p-4 font-semibold text-ink">Chuyên sâu</th>
+                <th class="p-4 font-semibold text-ink">Kèm 1-1</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-line">
+              <tr>
+                <td class="p-4 text-ink">Bài giảng video</td>
+                <td class="p-4 text-muted">100+</td>
+                <td class="p-4 text-muted">Toàn bộ</td>
+                <td class="p-4 text-muted">Toàn bộ</td>
+              </tr>
+              <tr>
+                <td class="p-4 text-ink">Luyện đề</td>
+                <td class="p-4 text-muted">5 đề</td>
+                <td class="p-4 text-muted">Không giới hạn</td>
+                <td class="p-4 text-muted">Không giới hạn</td>
+              </tr>
+              <tr>
+                <td class="p-4 text-ink">Phân tích lỗ hổng kiến thức</td>
+                <td class="p-4 text-muted">—</td>
+                <td class="p-4 text-muted">Có</td>
+                <td class="p-4 text-muted">Có</td>
+              </tr>
+              <tr>
+                <td class="p-4 text-ink">Học cùng giảng viên 1-1</td>
+                <td class="p-4 text-muted">—</td>
+                <td class="p-4 text-muted">—</td>
+                <td class="p-4 text-muted">12 buổi</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </section>
 
     <!-- ================= FAQ, CTA VÀ FOOTER ================= -->
@@ -504,7 +551,7 @@
   <!-- ================= FOOTER ================= -->
   <footer class="bg-surface border-t border-line pt-20 pb-8">
     <div class="mx-auto w-full max-w-6xl px-5">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 pb-12 border-b border-line">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 pb-12 border-b border-line">
         
         <!-- Cột 1: Logo & Thông tin -->
         <div class="space-y-4">
@@ -563,7 +610,5 @@
       </div>
     </div>
   </footer>
-
-    </main>
   </body>
 </html>
