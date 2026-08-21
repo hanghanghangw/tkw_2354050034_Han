@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Liên hệ | TOEIC Mastery</title>
+  <link rel="stylesheet" href="dist/output.css" />
+</head>
+<body class="font-body">
+  <header class="w-full border-b border-line bg-surface dark:border-line-invert dark:bg-surface-dark">
+  <nav class="mx-auto flex h-[72px] max-w-6xl items-center justify-between px-5 sm:px-8 lg:px-5" aria-label="Điều hướng chính">
+    <a href="index.html" class="flex items-center gap-2 font-display text-lg font-bold text-ink dark:text-ink-invert">
+      <span class="grid h-8 w-8 place-items-center rounded-lg bg-brand-600 text-white">T</span>
+      TOEIC <span class="text-brand-600">Mastery</span>
+    </a>
+
+    <div class="hidden items-center gap-7 text-sm font-medium lg:flex">
+      <a href="index.html#courses" class="hover:text-brand-600">Khóa học</a>
+      <a href="index.html#why-us" class="hover:text-brand-600">Vì sao chọn chúng tôi</a>
+      <a href="pricing.html" class="hover:text-brand-600">Bảng giá</a>
+      <a href="contact.html" class="hover:text-brand-600">Liên hệ</a>
+    </div>
+
+    <div class="hidden items-center gap-4 lg:flex">
+      <a href="#" class="text-sm font-medium hover:text-brand-600">Đăng nhập</a>
+      <a href="index.html#courses" class="btn btn-primary">Bắt đầu học</a>
+    </div>
+
+    <button class="text-2xl lg:hidden" type="button" aria-label="Mở menu">
+      ☰
+    </button>
+  </nav>
+</header>
+  <main>
+    <section class="section">
+      <div class="grid gap-10 lg:grid-cols-2 lg:gap-16">
+        <div>
+          <span class="eyebrow">Liên hệ</span>
+          <h1 class="mt-2 font-display text-4xl font-bold sm:text-5xl">Để lại thông tin tư vấn</h1>
+          <p class="mt-4 text-sm leading-7 text-muted dark:text-muted-invert">
+            Điền biểu mẫu bên cạnh. Đội ngũ tư vấn sẽ phản hồi theo thông tin bạn cung cấp.
+          </p>
+
+          <div class="card mt-8">
+            <h2 class="font-semibold">Sau khi gửi thì sao?</h2>
+            <ol class="mt-4 list-decimal space-y-2 pl-5 text-sm text-muted dark:text-muted-invert">
+              <li>Hệ thống ghi nhận thông tin.</li>
+              <li>Nhân viên tư vấn kiểm tra nhu cầu.</li>
+              <li>Bạn được liên hệ qua email hoặc số điện thoại đã cung cấp.</li>
+            </ol>
+          </div>
+        </div>
+
+        <form class="card" action="#" method="post">
+          <div>
+            <label class="field-label" for="ho-ten">Họ và tên <span class="text-red-600" aria-hidden="true">*</span></label>
+            <input class="field-input" id="ho-ten" name="hoTen" type="text" required autocomplete="name" />
+          </div>
+
+          <div class="mt-5">
+            <label class="field-label" for="dien-thoai">Số điện thoại <span class="text-red-600" aria-hidden="true">*</span></label>
+            <input class="field-input" id="dien-thoai" name="dienThoai" type="tel" required pattern="0[0-9]{9}" autocomplete="tel" inputmode="numeric" aria-describedby="dien-thoai-hint dien-thoai-error" />
+            <p class="mt-1.5 text-xs text-muted dark:text-muted-invert" id="dien-thoai-hint">Chúng tôi gọi qua số này, không nhắn tin quảng cáo.</p>
+            <p class="field-error" id="dien-thoai-error" role="alert"></p>
+          </div>
+
+          <div class="mt-5">
+            <label class="field-label" for="email">Email <span class="text-red-600" aria-hidden="true">*</span></label>
+            <input class="field-input" id="email" name="email" type="email" required autocomplete="email" />
+          </div>
+
+          <div class="mt-5">
+            <label class="field-label" for="muc-tieu">Mục tiêu TOEIC</label>
+            <select class="field-input" id="muc-tieu" name="mucTieu">
+              <option value="">Chọn mục tiêu</option><option>550+</option><option>750+</option><option>850+</option><option>900+</option>
+            </select>
+          </div>
+
+          <div class="mt-5">
+            <label class="field-label" for="noi-dung">Nội dung cần tư vấn</label>
+            <textarea class="field-input min-h-32" id="noi-dung" name="noiDung"></textarea>
+          </div>
+
+          <div class="mt-5 flex items-start gap-3">
+            <input id="dong-y" name="dongY" type="checkbox" required class="mt-1 h-4 w-4 accent-brand-600" />
+            <label for="dong-y" class="text-sm text-muted dark:text-muted-invert">Tôi đồng ý để TOEIC Mastery liên hệ tư vấn.</label>
+          </div>
+
+          <button class="btn btn-primary mt-6 w-full" type="submit">Gửi thông tin</button>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer class="border-t border-line bg-surface dark:border-line-invert dark:bg-surface-dark">
+  <div class="mx-auto w-full max-w-6xl px-5 py-12 sm:px-8 lg:px-5">
+    <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+      <div class="space-y-3">
+        <a href="index.html" class="font-display text-lg font-bold text-brand-600">TOEIC Mastery</a>
+        <p class="text-sm text-muted dark:text-muted-invert">Nền tảng học và luyện thi TOEIC trực tuyến.</p>
+      </div>
+      <nav aria-labelledby="footer-course">
+        <h2 id="footer-course" class="mb-3 font-semibold">Khóa học</h2>
+        <ul class="space-y-2 text-sm text-muted dark:text-muted-invert">
+          <li><a class="hover:text-brand-600" href="index.html#courses">Foundation</a></li>
+          <li><a class="hover:text-brand-600" href="index.html#courses">Intermediate</a></li>
+          <li><a class="hover:text-brand-600" href="index.html#courses">Advanced</a></li>
+        </ul>
+      </nav>
+      <nav aria-labelledby="footer-info">
+        <h2 id="footer-info" class="mb-3 font-semibold">Thông tin</h2>
+        <ul class="space-y-2 text-sm text-muted dark:text-muted-invert">
+          <li><a class="hover:text-brand-600" href="pricing.html">Bảng giá</a></li>
+          <li><a class="hover:text-brand-600" href="contact.html">Liên hệ</a></li>
+          <li><a class="hover:text-brand-600" href="index.html#faq">FAQ</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h2 class="mb-3 font-semibold">Liên hệ</h2>
+        <p class="text-sm text-muted dark:text-muted-invert">Võ Văn Tần, Quận 3, TP.HCM</p>
+        <p class="mt-2 text-sm text-muted dark:text-muted-invert">support@toeicmastery.example</p>
+      </div>
+    </div>
+    <p class="mt-10 border-t border-line pt-6 text-center text-xs text-muted dark:border-line-invert dark:text-muted-invert">
+      © 2026 TOEIC Mastery.
+    </p>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,5 +1,7 @@
 @import "tailwindcss";
-@custom-variant dark (&:where(.dark, .dark *)); /*	sẽ	dùng	ở	buổi	3	*/
+
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --color-brand-50: #fcf4f4;
   --color-brand-100: #f9eaea;
@@ -12,40 +14,82 @@
   --color-accent-500: #7291bf;
 
   --color-ink: #12211d;
+  --color-ink-invert: #eaf2ee;
   --color-muted: #5c6f69;
+  --color-muted-invert: #afc2bc;
   --color-line: #dfe6e2;
+  --color-line-invert: #24403a;
   --color-surface: #ffffff;
+  --color-surface-dark: #0e1c19;
+  --color-surface-dark-alt: #142723;
 
   --font-display: "Be Vietnam Pro", system-ui, sans-serif;
   --font-body: "Inter", system-ui, sans-serif;
 
-  --radius-card: 0.875rem;
-  --radius-pill: 999px;
+  --radius-card: 16px;
+  --radius-pill: 9999px;
+}
+
+@layer base {
+  html { scroll-behavior: smooth; }
+
+  body { @apply bg-surface text-ink; }
+
+  /* Buổi 3: dark mode bằng token. Chỉ cần thêm class="dark" vào <html>. */
+  .dark {
+    --color-ink: #eaf2ee;
+    --color-muted: #afc2bc;
+    --color-line: #24403a;
+    --color-surface: #0e1c19;
+    --color-brand-50: #142723;
+    --color-brand-100: #24403a;
+    --color-brand-900: #eaf2ee;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-brand-600;
+  }
 }
 
 @layer components {
   .section {
-    @apply mx-auto w-full max-w-6xl px-5 py-20 lg:py-28;
+    @apply mx-auto w-full max-w-6xl px-5 py-16 sm:px-8 lg:px-5 lg:py-24;
   }
+
+  .eyebrow {
+    @apply text-xs font-semibold uppercase tracking-wider text-brand-600;
+  }
+
   .btn {
-    @apply inline-flex	items-center	justify-center	gap-2	rounded-pill
-														px-5	py-2.5	text-sm	font-semibold	transition-colors;
+    @apply inline-flex items-center justify-center gap-2 rounded-card px-5 py-3 text-sm font-semibold text-center transition;
   }
+
   .btn-primary {
-    @apply bg-brand-600	text-white	hover:bg-brand-700;
+    @apply bg-brand-600 text-white hover:bg-brand-700;
   }
 
   .btn-ghost {
-    @apply border border-line text-ink hover:bg-surface;
-  }
-  .btn-lg {
-    @apply px-7 py-3.5 text-base;
+    @apply border border-line bg-surface text-ink hover:bg-brand-50;
   }
 
   .card {
     @apply rounded-card border border-line bg-surface p-6;
   }
+
   .badge {
-    @apply inline-flex items-center gap-1.5 rounded-pill px-3 py-1 text-xs font-semibold;
+    @apply inline-flex w-fit items-center rounded-pill px-3 py-1.5 text-xs font-semibold;
+  }
+
+  .field-label {
+    @apply mb-2 block text-sm font-semibold text-ink;
+  }
+
+  .field-input {
+    @apply w-full rounded-card border border-line bg-surface px-4 py-3 text-sm text-ink
+           focus:border-brand-600 focus:outline-none focus:ring-2 focus:ring-brand-600/20;
+  }
+
+  .field-error {
+    @apply mt-1.5 min-h-4 text-xs text-red-600;
   }
 }
