@@ -3,4 +3,5 @@ import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
   plugins: [tailwindcss()],
+  base: "/tkw_2354050034_Han/",
 });
