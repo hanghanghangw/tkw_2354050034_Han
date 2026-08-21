@@ -4,8 +4,8 @@
   "description": "Sản phẩm: Quản lý",
   "main": "index.js",
   "scripts": {
-    "dev": "tailwindcss -i src/input.css -o dist/output.css --watch",
-    "build": "tailwindcss -i src/input.css -o dist/output.css --minify"
+    "dev": "vite",
+    "build": "vite build"
   },
   "repository": {
     "type": "git",
@@ -22,5 +22,9 @@
   "dependencies": {
     "@tailwindcss/cli": "^4.3.3",
     "tailwindcss": "^4.3.3"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "vite": "^8.2.2"
   }
 }

@@ -1,5 +1,35 @@
 @import "tailwindcss";
-@custom-variant dark (&:where(.dark, .dark *)); /*	sẽ	dùng	ở	buổi	3	*/
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --token-ink: #12211d;
+  --token-muted: #5c6f69;
+  --token-line: #dfe6e2;
+  --token-surface: #ffffff;
+  --token-surface-alt: #f8faf9;
+
+  --token-shadow-sm: 0 1px 2px 0 rgb(18 33 29 / 0.05);
+  --token-shadow-md:
+    0 4px 6px -1px rgb(18 33 29 / 0.08),
+    0 2px 4px -2px rgb(18 33 29 / 0.06);
+  --token-shadow-lg:
+    0 10px 15px -3px rgb(18 33 29 / 0.10),
+    0 4px 6px -4px rgb(18 33 29 / 0.08);
+}
+
+.dark {
+  --token-ink: #eaf2ee;
+  --token-muted: #afc2bc;
+  --token-line: #24403a;
+  --token-surface: #0e1c19;
+  --token-surface-alt: #142723;
+
+  --token-shadow-sm: 0 0 #0000;
+  --token-shadow-md: 0 0 #0000;
+  --token-shadow-lg: 0 0 #0000;
+}
+
 @theme {
   --color-brand-50: #fcf4f4;
   --color-brand-100: #f9eaea;
@@ -11,41 +41,62 @@
   --color-accent-400: #8dabcd;
   --color-accent-500: #7291bf;
 
-  --color-ink: #12211d;
-  --color-muted: #5c6f69;
-  --color-line: #dfe6e2;
-  --color-surface: #ffffff;
+  --color-ink: var(--token-ink);
+  --color-muted: var(--token-muted);
+  --color-line: var(--token-line);
+  --color-surface: var(--token-surface);
+  --color-surface-alt: var(--token-surface-alt);
 
   --font-display: "Be Vietnam Pro", system-ui, sans-serif;
   --font-body: "Inter", system-ui, sans-serif;
 
-  --radius-card: 0.875rem;
-  --radius-pill: 999px;
+  --radius-card: 16px;
+  --radius-pill: 9999px;
+
+  --shadow-sm: var(--token-shadow-sm);
+  --shadow-md: var(--token-shadow-md);
+  --shadow-lg: var(--token-shadow-lg);
 }
 
-@layer components {
-  .section {
-    @apply mx-auto w-full max-w-6xl px-5 py-20 lg:py-28;
-  }
-  .btn {
-    @apply inline-flex	items-center	justify-center	gap-2	rounded-pill
-														px-5	py-2.5	text-sm	font-semibold	transition-colors;
-  }
-  .btn-primary {
-    @apply bg-brand-600	text-white	hover:bg-brand-700;
+@layer base {
+  html {
+    scroll-behavior: smooth;
   }
 
-  .btn-ghost {
-    @apply border border-line text-ink hover:bg-surface;
+  body {
+    background-color: var(--token-surface);
+    color: var(--token-ink);
   }
-  .btn-lg {
-    @apply px-7 py-3.5 text-base;
+}
+
+/* Các class này đã được HTML hiện tại dùng.
+   Nếu thiếu chúng, .section/.card/.btn không có CSS và layout sẽ bung full width. */
+@layer components {
+  .section {
+    @apply mx-auto w-full max-w-6xl px-5 py-16 sm:px-8 lg:px-5 lg:py-24;
   }
 
   .card {
-    @apply rounded-card border border-line bg-surface p-6;
+    @apply rounded-card border border-line bg-surface p-6 shadow-sm;
   }
+
+  .btn {
+    @apply inline-flex items-center justify-center rounded-card px-5 py-3 text-sm font-semibold transition;
+  }
+
+  .btn-primary {
+    @apply bg-brand-600 text-white hover:bg-brand-700;
+  }
+
+  .btn-ghost {
+    @apply border border-line bg-surface text-ink hover:bg-brand-50;
+  }
+
+  .btn-lg {
+    @apply px-6 py-3.5 text-base;
+  }
+
   .badge {
-    @apply inline-flex items-center gap-1.5 rounded-pill px-3 py-1 text-xs font-semibold;
+    @apply inline-flex items-center rounded-pill px-3 py-1 text-xs font-semibold;
   }
 }
