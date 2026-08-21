@@ -3,7 +3,7 @@ name: Deploy Vite site to GitHub Pages
 on:
   push:
     branches:
-      - buoi-3
+      - main
 
 permissions:
   contents: read
