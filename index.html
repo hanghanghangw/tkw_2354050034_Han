@@ -666,65 +666,246 @@
 
     <!-- ================= FAQ, CTA VÀ FOOTER ================= -->
     <!-- FAQ -->
-    <section id="faq" class="section" data-reveal>
-      <div class="grid gap-12 lg:grid-cols-[1fr_1.4fr] items-start">
-        
-        <!-- Cột trái -->
-        <div class="space-y-6">
-          <span class="text-xs font-semibold text-brand-600 uppercase tracking-wider">CÂU HỎI THƯỜNG GẶP</span>
-          <h2 class="font-display text-3xl font-bold text-ink">Giải đáp thắc mắc của bạn</h2>
-          <p class="text-sm text-muted">Những câu hỏi phổ biến nhất về lộ trình, phương thức thanh toán và cam kết chất lượng.</p>
+    <!-- ================= FAQ ================= -->
+<section
+  id="faq"
+  class="section bg-surface"
+  data-reveal
+>
+  <!-- Tiêu đề section -->
+  <div class="mx-auto max-w-3xl text-center mb-12">
+    <span
+      class="text-xs font-semibold text-brand-600 uppercase tracking-wider"
+    >
+      CÂU HỎI THƯỜNG GẶP
+    </span>
 
-          <div class="card bg-surface-alt border-line space-y-3">
-            <span class="grid h-10 w-10 place-items-center rounded-lg bg-brand-600 text-white">
-              <i data-lucide="help-circle" class="h-5 w-5" aria-hidden="true"></i>
-            </span>
-            <h3 class="font-bold text-sm text-ink">Bạn vẫn còn câu hỏi khác?</h3>
-            <p class="text-xs text-muted">Đội ngũ tư vấn luôn sẵn sàng hỗ trợ bạn 24/7 qua chat trực tiếp.</p>
-            <a href="#" class="inline-flex items-center gap-2 text-xs font-bold text-brand-600 hover:underline pt-1">
-              Liên hệ bộ phận tư vấn <i data-lucide="arrow-right" class="h-3.5 w-3.5" aria-hidden="true"></i>
-            </a>
-          </div>
-        </div>
+    <h2
+      class="font-display text-3xl md:text-4xl font-bold text-ink mt-2"
+    >
+      Giải đáp thắc mắc của bạn
+    </h2>
 
-        <!-- Cột phải -->
-        <div class="space-y-3">
-          <details class="group card p-4 [&_summary::-webkit-details-marker]:hidden" open>
-            <summary class="flex cursor-pointer items-center justify-between font-bold text-sm text-ink">
-              <span>Tôi có thể sử dụng TOEIC Mastery cho mục đích thương mại không?</span>
-              <span class="transition group-open:-rotate-180"><i data-lucide="chevron-down" class="h-4 w-4" aria-hidden="true"></i></span>
-            </summary>
-            <div class="mt-3 text-xs text-muted leading-relaxed space-y-2 border-t border-line/50 pt-3">
-              <p>Bản TOEIC Mastery được cấp phép sử dụng cho cá nhân và tổ chức giáo dục. Bạn có thể sử dụng trong các dự án học tập hoặc đào tạo nội bộ.</p>
-            </div>
-          </details>
+    <p
+      class="mt-4 text-sm md:text-base text-muted leading-relaxed"
+    >
+      Tìm hiểu thêm về khóa học, tài liệu, phương thức thanh toán
+      và các chính sách tại TOEIC Mastery.
+    </p>
+  </div>
 
-          <details class="group card p-4 [&_summary::-webkit-details-marker]:hidden">
-            <summary class="flex cursor-pointer items-center justify-between font-bold text-sm text-ink">
-              <span>Tôi có thể truy cập tài liệu tải về ở đâu?</span>
-              <span class="transition group-open:-rotate-180"><i data-lucide="chevron-down" class="h-4 w-4" aria-hidden="true"></i></span>
-            </summary>
-            <p class="mt-3 text-xs text-muted border-t border-line/50 pt-3">Tất cả tài liệu PDF và file nghe MP3 sẽ được mở khóa trực tiếp trong tài khoản sau khi kích hoạt.</p>
-          </details>
+  <!-- Nội dung -->
+  <div
+    class="grid gap-8 lg:grid-cols-[0.8fr_1.5fr] lg:gap-12 items-start"
+  >
+    <!-- ================= CỘT TRÁI ================= -->
+    <div
+      class="card bg-surface-alt border-line p-6 md:p-8"
+    >
+      <span
+        class="grid h-12 w-12 place-items-center rounded-xl bg-brand-600 text-white"
+      >
+        <i
+          data-lucide="help-circle"
+          class="h-6 w-6"
+          aria-hidden="true"
+        ></i>
+      </span>
 
-          <details class="group card p-4 [&_summary::-webkit-details-marker]:hidden">
-            <summary class="flex cursor-pointer items-center justify-between font-bold text-sm text-ink">
-              <span>Khóa học có phù hợp cho người mất gốc hoàn toàn?</span>
-              <span class="transition group-open:-rotate-180"><i data-lucide="chevron-down" class="h-4 w-4" aria-hidden="true"></i></span>
-            </summary>
-            <p class="mt-3 text-xs text-muted border-t border-line/50 pt-3">Có, khóa Foundation thiết kế lại toàn bộ phát âm, từ vựng và ngữ pháp từ con số 0.</p>
-          </details>
+      <h3
+        class="font-display font-bold text-xl text-ink mt-5"
+      >
+        Bạn vẫn còn câu hỏi?
+      </h3>
 
-          <details class="group card p-4 [&_summary::-webkit-details-marker]:hidden">
-            <summary class="flex cursor-pointer items-center justify-between font-bold text-sm text-ink">
-              <span>Phương thức thanh toán nào được hỗ trợ?</span>
-              <span class="transition group-open:-rotate-180"><i data-lucide="chevron-down" class="h-4 w-4" aria-hidden="true"></i></span>
-            </summary>
-            <p class="mt-3 text-xs text-muted border-t border-line/50 pt-3">Hỗ trợ Chuyển khoản QR, Ví MoMo, VNPay và tất cả các thẻ ATM/Visa/Mastercard.</p>
-          </details>
+      <p
+        class="mt-3 text-sm text-muted leading-relaxed"
+      >
+        Nếu chưa tìm thấy câu trả lời phù hợp, đội ngũ tư vấn
+        của chúng tôi luôn sẵn sàng hỗ trợ bạn.
+      </p>
+
+      <a
+        href="./contact.html"
+        class="btn btn-primary mt-6 inline-flex items-center gap-2"
+      >
+        Liên hệ tư vấn
+
+        <i
+          data-lucide="arrow-right"
+          class="h-4 w-4"
+          aria-hidden="true"
+        ></i>
+      </a>
+    </div>
+
+    <!-- ================= CỘT PHẢI ================= -->
+    <div class="space-y-4">
+
+      <!-- FAQ 1 -->
+      <div
+        class="card p-5 md:p-6 transition-shadow hover:shadow-md"
+      >
+        <button
+          type="button"
+          data-faq-button
+          aria-expanded="true"
+          aria-controls="faq-panel-1"
+          class="flex w-full items-center justify-between gap-5 text-left"
+        >
+          <span
+            class="font-semibold text-sm md:text-base text-ink"
+          >
+            Tôi có thể sử dụng TOEIC Mastery cho mục đích thương mại không?
+          </span>
+
+          <span
+            data-faq-icon
+            class="shrink-0 transition-transform duration-300 rotate-180"
+            aria-hidden="true"
+          >
+            <i
+              data-lucide="chevron-down"
+              class="h-5 w-5 text-brand-600"
+            ></i>
+          </span>
+        </button>
+
+        <div
+          id="faq-panel-1"
+          class="mt-4 border-t border-line pt-4 text-sm text-muted leading-relaxed"
+        >
+          <p>
+            Bản TOEIC Mastery được cấp phép sử dụng cho cá nhân
+            và tổ chức giáo dục. Bạn có thể sử dụng trong các dự
+            án học tập hoặc đào tạo nội bộ.
+          </p>
         </div>
       </div>
-    </section>
+
+      <!-- FAQ 2 -->
+      <div
+        class="card p-5 md:p-6 transition-shadow hover:shadow-md"
+      >
+        <button
+          type="button"
+          data-faq-button
+          aria-expanded="false"
+          aria-controls="faq-panel-2"
+          class="flex w-full items-center justify-between gap-5 text-left"
+        >
+          <span
+            class="font-semibold text-sm md:text-base text-ink"
+          >
+            Tôi có thể truy cập tài liệu tải về ở đâu?
+          </span>
+
+          <span
+            data-faq-icon
+            class="shrink-0 transition-transform duration-300"
+            aria-hidden="true"
+          >
+            <i
+              data-lucide="chevron-down"
+              class="h-5 w-5 text-brand-600"
+            ></i>
+          </span>
+        </button>
+
+        <div
+          id="faq-panel-2"
+          class="hidden mt-4 border-t border-line pt-4 text-sm text-muted leading-relaxed"
+        >
+          <p>
+            Tất cả tài liệu PDF và file nghe MP3 sẽ được mở khóa
+            trực tiếp trong tài khoản sau khi kích hoạt.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ 3 -->
+      <div
+        class="card p-5 md:p-6 transition-shadow hover:shadow-md"
+      >
+        <button
+          type="button"
+          data-faq-button
+          aria-expanded="false"
+          aria-controls="faq-panel-3"
+          class="flex w-full items-center justify-between gap-5 text-left"
+        >
+          <span
+            class="font-semibold text-sm md:text-base text-ink"
+          >
+            Khóa học có phù hợp cho người mất gốc hoàn toàn?
+          </span>
+
+          <span
+            data-faq-icon
+            class="shrink-0 transition-transform duration-300"
+            aria-hidden="true"
+          >
+            <i
+              data-lucide="chevron-down"
+              class="h-5 w-5 text-brand-600"
+            ></i>
+          </span>
+        </button>
+
+        <div
+          id="faq-panel-3"
+          class="hidden mt-4 border-t border-line pt-4 text-sm text-muted leading-relaxed"
+        >
+          <p>
+            Có. Khóa Foundation được thiết kế để xây dựng lại
+            phát âm, từ vựng và ngữ pháp từ nền tảng cơ bản.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ 4 -->
+      <div
+        class="card p-5 md:p-6 transition-shadow hover:shadow-md"
+      >
+        <button
+          type="button"
+          data-faq-button
+          aria-expanded="false"
+          aria-controls="faq-panel-4"
+          class="flex w-full items-center justify-between gap-5 text-left"
+        >
+          <span
+            class="font-semibold text-sm md:text-base text-ink"
+          >
+            Phương thức thanh toán nào được hỗ trợ?
+          </span>
+
+          <span
+            data-faq-icon
+            class="shrink-0 transition-transform duration-300"
+            aria-hidden="true"
+          >
+            <i
+              data-lucide="chevron-down"
+              class="h-5 w-5 text-brand-600"
+            ></i>
+          </span>
+        </button>
+
+        <div
+          id="faq-panel-4"
+          class="hidden mt-4 border-t border-line pt-4 text-sm text-muted leading-relaxed"
+        >
+          <p>
+            TOEIC Mastery hỗ trợ chuyển khoản QR, Ví MoMo,
+            VNPay và các loại thẻ ATM, Visa, Mastercard.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
     <!-- CTA BANNER-->
     <section data-reveal class="bg-surface-alt py-14 sm:py-16 lg:py-20 border-y border-line">
