@@ -81,7 +81,7 @@
 
     <!-- ================= HERO ================= -->
     <main>
-      <section
+      <section data-reveal
         class="section sm:px-[32px] lg:px-[50px] md:pt-[90px] lg:pt-[95px]"
       >
         <div
@@ -230,7 +230,7 @@
         </div>
       </section>
       <!-- ================= DẢI KHÁCH HÀNG & LƯỚI TÍNH NĂNG ================= -->
-    <section class="border-y border-line bg-surface-alt py-12">
+    <section  class="border-y border-line bg-surface-alt py-12">
       <div class="mx-auto w-full max-w-6xl px-5 text-center">
         <p class="text-xs font-semibold text-muted uppercase tracking-wider mb-6">Được tin tưởng bởi học viên từ các trường đại học & doanh nghiệp</p>
         <ul class="flex flex-wrap items-center justify-center gap-x-12 gap-y-6 opacity-70">
@@ -321,162 +321,348 @@
         </dl>
 
         <div id="testimonials" class="space-y-8">
-          <div class="text-center max-w-2xl mx-auto">
-            <span class="text-xs font-semibold text-brand-600 uppercase tracking-wider">CÂU CHUYỆN THÀNH CÔNG</span>
-            <h2 class="font-display text-3xl font-bold text-ink mt-2">Học viên nói gì về chúng tôi</h2>
-          </div>
+  <div class="text-center max-w-2xl mx-auto">
+    <span
+      class="text-xs font-semibold text-brand-600 uppercase tracking-wider"
+    >
+      CÂU CHUYỆN THÀNH CÔNG
+    </span>
 
-          <div class="grid gap-6 md:grid-cols-3">
-            <figure class="rounded-card bg-surface p-6 border border-line shadow-sm flex flex-col justify-between">
-              <blockquote class="text-xs text-muted leading-relaxed">
-                "Trước đây tối nào tôi cũng loay hoay không biết giải đề từ đâu. Lộ trình học ở đây rất rõ ràng, bài giảng dễ hiểu và sát với đề thi thật. Mình tăng hơn 100 điểm chỉ sau 2 tháng!"
-              </blockquote>
-              <figcaption class="mt-6 flex items-center gap-3 pt-4 border-t border-line">
-                <img class="h-10 w-10 rounded-full object-cover" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100" alt="Nguyễn Minh Anh" />
-                <div>
-                  <span class="block text-sm font-bold text-ink">Nguyễn Minh Anh</span>
-                  <cite class="block text-xs text-brand-600 not-italic font-medium">Đạt 850 TOEIC - Sinh viên BKU</cite>
-                </div>
-              </figcaption>
-            </figure>
+    <h2 class="font-display text-3xl font-bold text-ink mt-2">
+      Học viên nói gì về chúng tôi
+    </h2>
+  </div>
 
-            <figure class="rounded-card bg-surface p-6 border border-line shadow-sm flex flex-col justify-between">
-              <blockquote class="text-xs text-muted leading-relaxed">
-                "Hệ thống bài tập và chấm điểm tự động bằng AI giúp mình phát hiện ngay kỹ năng Listening còn yếu. Rất đáng để đầu tư cho công việc!"
-              </blockquote>
-              <figcaption class="mt-6 flex items-center gap-3 pt-4 border-t border-line">
-                <img class="h-10 w-10 rounded-full object-cover" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100" alt="Trần Quốc Bảo" />
-                <div>
-                  <span class="block text-sm font-bold text-ink">Trần Quốc Bảo</span>
-                  <cite class="block text-xs text-brand-600 not-italic font-medium">Đạt 820 TOEIC - Lập trình viên</cite>
-                </div>
-              </figcaption>
-            </figure>
+  <!-- SLIDER -->
+  <div
+    class="relative overflow-hidden"
+    data-slider
+  >
+    <!-- TRACK -->
+    <div
+      class="flex transition-transform duration-500 ease-in-out"
+      data-slider-track
+    >
+      <!-- SLIDE 1 -->
+      <figure
+        class="min-w-full px-1 sm:px-4 md:px-8 lg:px-16"
+        data-slide
+      >
+        <div
+          class="mx-auto max-w-3xl rounded-card bg-surface p-6 sm:p-8 border border-line shadow-sm flex flex-col justify-between"
+        >
+          <blockquote
+            class="text-sm sm:text-base text-muted leading-relaxed"
+          >
+            "Trước đây tối nào tôi cũng loay hoay không biết giải đề từ đâu.
+            Lộ trình học ở đây rất rõ ràng, bài giảng dễ hiểu và sát với đề
+            thi thật. Mình tăng hơn 100 điểm chỉ sau 2 tháng!"
+          </blockquote>
 
-            <figure class="rounded-card bg-surface p-6 border border-line shadow-sm flex flex-col justify-between">
-              <blockquote class="text-xs text-muted leading-relaxed">
-                "Giáo viên hỗ trợ nhiệt tình 24/7, giải đáp thắc mắc chi tiết. Nhờ TOEIC Mastery mà mình tự tin ra trường đúng hạn."
-              </blockquote>
-              <figcaption class="mt-6 flex items-center gap-3 pt-4 border-t border-line">
-                <img class="h-10 w-10 rounded-full object-cover" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100" alt="Lê Thảo Vy" />
-                <div>
-                  <span class="block text-sm font-bold text-ink">Lê Thảo Vy</span>
-                  <cite class="block text-xs text-brand-600 not-italic font-medium">Đạt 790 TOEIC - Sinh viên FTU</cite>
-                </div>
-              </figcaption>
-            </figure>
-          </div>
+          <figcaption
+            class="mt-6 flex items-center gap-3 pt-4 border-t border-line"
+          >
+            <img
+              class="h-10 w-10 sm:h-12 sm:w-12 rounded-full object-cover"
+              src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100"
+              alt="Nguyễn Minh Anh"
+            />
+
+            <div>
+              <span class="block text-sm font-bold text-ink">
+                Nguyễn Minh Anh
+              </span>
+
+              <cite
+                class="block text-xs text-brand-600 not-italic font-medium"
+              >
+                Đạt 850 TOEIC - Sinh viên BKU
+              </cite>
+            </div>
+          </figcaption>
         </div>
+      </figure>
+
+      <!-- SLIDE 2 -->
+      <figure
+        class="min-w-full px-1 sm:px-4 md:px-8 lg:px-16"
+        data-slide
+      >
+        <div
+          class="mx-auto max-w-3xl rounded-card bg-surface p-6 sm:p-8 border border-line shadow-sm flex flex-col justify-between"
+        >
+          <blockquote
+            class="text-sm sm:text-base text-muted leading-relaxed"
+          >
+            "Hệ thống bài tập và chấm điểm tự động bằng AI giúp mình phát
+            hiện ngay kỹ năng Listening còn yếu. Rất đáng để đầu tư cho
+            công việc!"
+          </blockquote>
+
+          <figcaption
+            class="mt-6 flex items-center gap-3 pt-4 border-t border-line"
+          >
+            <img
+              class="h-10 w-10 sm:h-12 sm:w-12 rounded-full object-cover"
+              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100"
+              alt="Trần Quốc Bảo"
+            />
+
+            <div>
+              <span class="block text-sm font-bold text-ink">
+                Trần Quốc Bảo
+              </span>
+
+              <cite
+                class="block text-xs text-brand-600 not-italic font-medium"
+              >
+                Đạt 820 TOEIC - Lập trình viên
+              </cite>
+            </div>
+          </figcaption>
+        </div>
+      </figure>
+
+      <!-- SLIDE 3 -->
+      <figure
+        class="min-w-full px-1 sm:px-4 md:px-8 lg:px-16"
+        data-slide
+      >
+        <div
+          class="mx-auto max-w-3xl rounded-card bg-surface p-6 sm:p-8 border border-line shadow-sm flex flex-col justify-between"
+        >
+          <blockquote
+            class="text-sm sm:text-base text-muted leading-relaxed"
+          >
+            "Giáo viên hỗ trợ nhiệt tình 24/7, giải đáp thắc mắc chi tiết.
+            Nhờ TOEIC Mastery mà mình tự tin ra trường đúng hạn."
+          </blockquote>
+
+          <figcaption
+            class="mt-6 flex items-center gap-3 pt-4 border-t border-line"
+          >
+            <img
+              class="h-10 w-10 sm:h-12 sm:w-12 rounded-full object-cover"
+              src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100"
+              alt="Lê Thảo Vy"
+            />
+
+            <div>
+              <span class="block text-sm font-bold text-ink">
+                Lê Thảo Vy
+              </span>
+
+              <cite
+                class="block text-xs text-brand-600 not-italic font-medium"
+              >
+                Đạt 790 TOEIC - Sinh viên FTU
+              </cite>
+            </div>
+          </figcaption>
+        </div>
+      </figure>
+    </div>
+
+    <!-- CONTROLS -->
+    <div
+      class="mt-6 flex items-center justify-center gap-3 sm:gap-5"
+    >
+      <button
+        type="button"
+        data-slider-prev
+        class="btn btn-ghost flex h-10 w-10 items-center justify-center p-0"
+        aria-label="Xem cảm nhận trước"
+      >
+        <span aria-hidden="true">←</span>
+      </button>
+
+      <!-- JS tự sinh dots -->
+      <div
+        class="flex items-center justify-center gap-2"
+        data-slider-dots
+        aria-label="Chọn cảm nhận học viên"
+      ></div>
+
+      <button
+        type="button"
+        data-slider-next
+        class="btn btn-ghost flex h-10 w-10 items-center justify-center p-0"
+        aria-label="Xem cảm nhận tiếp theo"
+      >
+        <span aria-hidden="true">→</span>
+      </button>
+    </div>
+  </div>
+</div>
 
       </div>
     </section>
     
    <!-- ================= THẺ GIÁ  ================= -->
-    <section id="pricing" class="section">
-      <div class="text-center max-w-2xl mx-auto mb-14">
-        <span class="text-xs font-semibold text-brand-600 uppercase tracking-wider">BẢNG GIÁ LINH HOẠT</span>
-        <h2 class="font-display text-3xl font-bold text-ink mt-2">Đầu tư nhỏ, kết quả lớn</h2>
-        <p class="text-sm text-muted mt-2">Lựa chọn gói học phù hợp nhất với nhu cầu cá nhân của bạn.</p>
-      </div>
+    <section id="pricing" class="section" data-reveal>
+    <div class="mx-auto max-w-2xl text-center">
+      <span class="eyebrow">Bảng giá linh hoạt</span>
+      <h1 class="mt-2 font-display text-4xl font-bold sm:text-5xl">Đầu tư nhỏ, kết quả lớn</h1>
+      <p class="mt-3 text-sm text-muted">Lựa chọn gói học phù hợp nhất với nhu cầu cá nhân của bạn.</p>
+    </div>
+<div class="flex justify-center items-center gap-4 my-10">
+    <span class="text-ink font-medium">
+      Monthly
+    </span>
 
-      <ul class="grid items-stretch gap-6 lg:grid-cols-3">
-        <!-- Thẻ 1 -->
-        <li class="card relative flex h-full flex-col">
-          <h3 class="font-display text-lg font-bold text-ink">Cơ bản (Basic)</h3>
-          <p class="mt-2 text-3xl font-extrabold text-brand-600">499.000đ <span class="text-xs font-normal text-muted">/ 3 tháng</span></p>
-          <p class="text-xs text-muted mt-1">Dành cho người tự học nâng cao từ vựng và ngữ pháp.</p>
-          
-          <ul class="mt-6 space-y-3 text-xs text-ink">
-            <li class="flex items-center gap-2"><i data-lucide="check" class="h-4 w-4 text-brand-600 shrink-0" aria-hidden="true"></i> Truy cập 100+ bài giảng video</li>
-            <li class="flex items-center gap-2"><i data-lucide="check" class="h-4 w-4 text-brand-600 shrink-0" aria-hidden="true"></i> Kho bài tập ngữ pháp & từ vựng</li>
-            <li class="flex items-center gap-2"><i data-lucide="check" class="h-4 w-4 text-brand-600 shrink-0" aria-hidden="true"></i> 5 đề thi thử có đáp án chi tiết</li>
-          </ul>
+    <button
+      type="button"
+      data-billing-toggle
+      role="switch"
+      aria-checked="false"
+      class="relative w-14 h-8 rounded-full
+             bg-surface-alt border border-line
+             focus:outline-none
+             focus:ring-2 focus:ring-brand-600"
+      aria-label="Chuyển giữa thanh toán tháng và năm"
+    >
+      <span
+        class="absolute left-1 top-1
+               w-6 h-6 rounded-full
+               bg-brand-600 transition-transform"
+        data-switch-knob
+      ></span>
+    </button>
 
-          <a href="#" class="btn btn-ghost mt-auto">Chọn gói này</a>
-        </li>
+    <span class="text-ink font-medium">
+      Yearly
+    </span>
+  </div>
+    <ul class="mt-12 grid items-stretch gap-6 lg:grid-cols-3">
+  <!-- BASIC -->
+  <li class="card flex h-full flex-col" data-reveal>
+    <h2 class="font-display text-lg font-bold">
+      Cơ bản (Basic)
+    </h2>
 
-        <!-- Thẻ 2 -->
-        <li class="card relative flex h-full flex-col ring-2 ring-brand-600 shadow-md">
-          <span class="badge absolute -top-3 left-6 bg-brand-600 text-white">
-            Được chọn nhiều nhất
-          </span>
-          <h3 class="font-display text-lg font-bold text-ink">Chuyên sâu (Pro)</h3>
-          <p class="mt-2 text-3xl font-extrabold text-brand-600">999.000đ <span class="text-xs font-normal text-muted">/ 6 tháng</span></p>
-          <p class="text-xs text-muted mt-1">Giải pháp toàn diện nhất để đạt mục tiêu 750+ TOEIC.</p>
+    <p class="mt-2 text-3xl font-extrabold text-brand-600">
+      <span
+        data-price
+        data-monthly="499000"
+        data-yearly="1699000"
+      >
+        499.000 ₫
+      </span>
 
-          <ul class="mt-6 space-y-3 text-xs text-ink">
-            <li class="flex items-center gap-2"><i data-lucide="check" class="h-4 w-4 text-brand-600 shrink-0" aria-hidden="true"></i> Toàn bộ nội dung gói Cơ bản</li>
-            <li class="flex items-center gap-2"><i data-lucide="check" class="h-4 w-4 text-brand-600 shrink-0" aria-hidden="true"></i> Luyện đề không giới hạn với AI</li>
-            <li class="flex items-center gap-2"><i data-lucide="check" class="h-4 w-4 text-brand-600 shrink-0" aria-hidden="true"></i> Phân tích lỗ hổng kiến thức tự động</li>
-            <li class="flex items-center gap-2"><i data-lucide="check" class="h-4 w-4 text-brand-600 shrink-0" aria-hidden="true"></i> Tham gia Group hỗ trợ học tập 24/7</li>
-          </ul>
+      <span
+        class="text-xs font-normal text-muted"
+        data-period
+      >
+        / 3 tháng
+      </span>
+    </p>
 
-          <a href="#" class="btn btn-primary mt-auto">Chọn gói này</a>
-        </li>
+    <p class="mt-2 text-xs text-muted">
+      Dành cho người tự học nâng cao từ vựng và ngữ pháp.
+    </p>
 
-        <!-- Thẻ 3 -->
-        <li class="card relative flex h-full flex-col">
-          <h3 class="font-display text-lg font-bold text-ink">Kèm 1-1 (VIP)</h3>
-          <p class="mt-2 text-3xl font-extrabold text-brand-600">2.499.000đ <span class="text-xs font-normal text-muted">/ 6 tháng</span></p>
-          <p class="text-xs text-muted mt-1">Cam kết đầu ra 850+ có giảng viên đồng hành trực tiếp.</p>
+    <ul class="mt-6 space-y-3 text-xs">
+      <li>✓ Truy cập 100+ bài giảng video</li>
+      <li>✓ Kho bài tập ngữ pháp & từ vựng</li>
+      <li>✓ 5 đề thi thử có đáp án chi tiết</li>
+    </ul>
 
-          <ul class="mt-6 space-y-3 text-xs text-ink">
-            <li class="flex items-center gap-2"><i data-lucide="check" class="h-4 w-4 text-brand-600 shrink-0" aria-hidden="true"></i> Toàn bộ đặc quyền gói Pro</li>
-            <li class="flex items-center gap-2"><i data-lucide="check" class="h-4 w-4 text-brand-600 shrink-0" aria-hidden="true"></i> 12 buổi sửa đề trực tiếp với Giảng viên</li>
-            <li class="flex items-center gap-2"><i data-lucide="check" class="h-4 w-4 text-brand-600 shrink-0" aria-hidden="true"></i> Cam kết hoàn tiền 100% nếu không đạt mục tiêu</li>
-          </ul>
+    <a href="contact.html" class="btn btn-ghost mt-8">
+      Chọn gói này
+    </a>
+  </li>
 
-          <a href="#" class="btn btn-ghost mt-auto">Chọn gói này</a>
-        </li>
-      </ul>
 
-      <!-- Bảng so sánh -->
-      <div class="mt-12">
-        <h3 class="font-display text-2xl font-bold text-ink">So sánh nhanh các gói</h3>
-        <p class="mt-2 text-sm text-muted lg:hidden">
-          Vuốt ngang để xem hết bảng.
-        </p>
+  <!-- PRO -->
+  <li
+    class="card relative flex h-full flex-col ring-2 ring-brand-600"
+    data-reveal
+  >
+    <span
+      class="badge absolute -top-3 left-6 bg-brand-600 text-white"
+    >
+      Được chọn nhiều nhất
+    </span>
 
-        <div class="mt-5 overflow-x-auto">
-          <table class="w-full min-w-[720px] border-collapse text-left text-sm">
-            <thead>
-              <tr class="border-b border-line bg-surface-alt">
-                <th class="p-4 font-semibold text-ink">Tính năng</th>
-                <th class="p-4 font-semibold text-ink">Cơ bản</th>
-                <th class="p-4 font-semibold text-ink">Chuyên sâu</th>
-                <th class="p-4 font-semibold text-ink">Kèm 1-1</th>
-              </tr>
-            </thead>
-            <tbody class="divide-y divide-line">
-              <tr>
-                <td class="p-4 text-ink">Bài giảng video</td>
-                <td class="p-4 text-muted">100+</td>
-                <td class="p-4 text-muted">Toàn bộ</td>
-                <td class="p-4 text-muted">Toàn bộ</td>
-              </tr>
-              <tr>
-                <td class="p-4 text-ink">Luyện đề</td>
-                <td class="p-4 text-muted">5 đề</td>
-                <td class="p-4 text-muted">Không giới hạn</td>
-                <td class="p-4 text-muted">Không giới hạn</td>
-              </tr>
-              <tr>
-                <td class="p-4 text-ink">Phân tích lỗ hổng kiến thức</td>
-                <td class="p-4 text-muted">—</td>
-                <td class="p-4 text-muted">Có</td>
-                <td class="p-4 text-muted">Có</td>
-              </tr>
-              <tr>
-                <td class="p-4 text-ink">Học cùng giảng viên 1-1</td>
-                <td class="p-4 text-muted">—</td>
-                <td class="p-4 text-muted">—</td>
-                <td class="p-4 text-muted">12 buổi</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </section>
+    <h2 class="font-display text-lg font-bold">
+      Chuyên sâu (Pro)
+    </h2>
+
+    <p class="mt-2 text-3xl font-extrabold text-brand-600">
+      <span
+        data-price
+        data-monthly="999000"
+        data-yearly="3499000"
+      >
+        999.000 ₫
+      </span>
+
+      <span
+        class="text-xs font-normal text-muted"
+        data-period
+      >
+        / 6 tháng
+      </span>
+    </p>
+
+    <p class="mt-2 text-xs text-muted">
+      Giải pháp toàn diện nhất để đạt mục tiêu 750+ TOEIC.
+    </p>
+
+    <ul class="mt-6 space-y-3 text-xs">
+      <li>✓ Toàn bộ nội dung gói Cơ bản</li>
+      <li>✓ Luyện đề không giới hạn với AI</li>
+      <li>✓ Phân tích lỗ hổng kiến thức tự động</li>
+      <li>✓ Group hỗ trợ học tập 24/7</li>
+    </ul>
+
+    <a href="contact.html" class="btn btn-primary mt-8">
+      Chọn gói này
+    </a>
+  </li>
+
+
+  <!-- VIP -->
+  <li class="card flex h-full flex-col" data-reveal>
+    <h2 class="font-display text-lg font-bold">
+      Kèm 1-1 (VIP)
+    </h2>
+
+    <p class="mt-2 text-3xl font-extrabold text-brand-600">
+      <span
+        data-price
+        data-monthly="2499000"
+        data-yearly="8999000"
+      >
+        2.499.000 ₫
+      </span>
+
+      <span
+        class="text-xs font-normal text-muted"
+        data-period
+      >
+        / 6 tháng
+      </span>
+    </p>
+
+    <p class="mt-2 text-xs text-muted">
+      Cam kết đầu ra 850+ có giảng viên đồng hành trực tiếp.
+    </p>
+
+    <ul class="mt-6 space-y-3 text-xs">
+      <li>✓ Toàn bộ đặc quyền gói Pro</li>
+      <li>✓ 12 buổi sửa đề trực tiếp</li>
+      <li>✓ Cam kết hoàn tiền nếu không đạt mục tiêu</li>
+    </ul>
+
+    <a href="contact.html" class="btn btn-ghost mt-8">
+      Chọn gói này
+    </a>
+  </li>
+</ul>
+  </section>
+
+
 
     <!-- ================= FAQ, CTA VÀ FOOTER ================= -->
     <!-- FAQ -->
