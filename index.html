@@ -11,65 +11,54 @@
   </head>
 
   <body class="font-body bg-surface text-ink">
+    <div id="nav-sentinel" aria-hidden="true"></div>
     <!-- ================= NAVBAR ================= -->
     <header class="w-full bg-surface">
-      <nav
-        class="max-w-[1366px] mx-auto px-[24px] lg:px-[50px] h-[72px] flex items-center justify-between"
-      >
-        <!-- Logo -->
-        <a href="#" class="flex items-center gap-[10px] font-bold text-[20px]">
-          <span
-            class="w-[30px] h-[30px] rounded-[8px] bg-brand-600 flex items-center justify-center text-white"
-          >
-            T
-          </span>
+  <nav
+    class="max-w-[1366px] mx-auto px-[24px] lg:px-[50px]
+           h-[72px] flex items-center justify-between"
+  >
+    <a href="#" class="font-bold text-[20px]">
+      TOEIC Mastery
+    </a>
 
-          TOEIC<span class="text-brand-600">Mastery</span>
-        </a>
+    <!-- Desktop menu -->
+    <div class="hidden lg:flex items-center gap-[28px]">
+      <a href="#courses">Courses</a>
+      <a href="#features">Why us</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+    </div>
 
-        <!-- Desktop navigation -->
-        <div
-          class="hidden lg:flex items-center gap-[28px] text-[14px] font-medium text-ink"
-        >
-          <a href="#courses" class="hover:text-brand-600 transition">
-            Courses
-          </a>
+    <!-- Mobile button -->
+    <button
+      id="menu-toggle"
+      type="button"
+      class="lg:hidden text-[24px]"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+      aria-label="Mở menu"
+    >
+      ☰
+    </button>
+  </nav>
 
-          <a href="#features" class="hover:text-brand-600 transition">
-            Why us
-          </a>
-
-          <a href="pricing.html" class="hover:text-brand-600 transition">
-            Pricing
-          </a>
-
-          <a href="contact.html" class="hover:text-brand-600 transition">Contact</a>
-
-          <a href="#faq" class="hover:text-brand-600 transition"> FAQ </a>
-        </div>
-
-        <!-- Right -->
-        <div class="hidden lg:flex items-center gap-[18px]">
-          <button
-            class="text-[14px] font-medium text-ink hover:text-brand-600 transition"
-          >
-            Log in
-          </button>
-
-          <a
-            href="#courses"
-            class="bg-brand-600 hover:bg-brand-700 text-white text-[14px] font-semibold px-[20px] py-[10px] rounded-card transition"
-          >
-            Start learning
-          </a>
-        </div>
-
-        <!-- Mobile -->
-        <button class="lg:hidden text-ink text-[24px]" aria-label="Open menu">
-          ☰
-        </button>
-      </nav>
-    </header>
+  <!-- Mobile menu -->
+  <div
+    id="mobile-menu"
+    class="hidden lg:hidden border-t border-line bg-surface"
+  >
+    <nav
+      class="flex flex-col gap-4 px-6 py-5"
+      aria-label="Menu mobile"
+    >
+      <a href="#courses">Courses</a>
+      <a href="#features">Why us</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+  </div>
+</header>
 
     <!-- ================= HERO ================= -->
     <main>
