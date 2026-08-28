@@ -15,7 +15,8 @@
 
       document.documentElement.classList.toggle("dark", dark);
     })();
-  </script></head>
+  </script>
+  </head>
 <body class="font-body bg-surface text-ink">
       <div id="nav-sentinel" aria-hidden="true"></div>
 
@@ -73,54 +74,170 @@
   </div>
 </header>
 <main>
-  <section class="section">
+  <section id="pricing" class="section">
     <div class="mx-auto max-w-2xl text-center">
       <span class="eyebrow">Bảng giá linh hoạt</span>
       <h1 class="mt-2 font-display text-4xl font-bold sm:text-5xl">Đầu tư nhỏ, kết quả lớn</h1>
       <p class="mt-3 text-sm text-muted">Lựa chọn gói học phù hợp nhất với nhu cầu cá nhân của bạn.</p>
     </div>
+<div class="flex justify-center items-center gap-4 my-10">
+    <span class="text-ink font-medium">
+      Monthly
+    </span>
 
+    <button
+      type="button"
+      data-billing-toggle
+      role="switch"
+      aria-checked="false"
+      class="relative w-14 h-8 rounded-full
+             bg-surface-alt border border-line
+             focus:outline-none
+             focus:ring-2 focus:ring-brand-600"
+      aria-label="Chuyển giữa thanh toán tháng và năm"
+    >
+      <span
+        class="absolute left-1 top-1
+               w-6 h-6 rounded-full
+               bg-brand-600 transition-transform"
+        data-switch-knob
+      ></span>
+    </button>
+
+    <span class="text-ink font-medium">
+      Yearly
+    </span>
+  </div>
     <ul class="mt-12 grid items-stretch gap-6 lg:grid-cols-3">
-      <li class="card flex h-full flex-col">
-        <h2 class="font-display text-lg font-bold">Cơ bản (Basic)</h2>
-        <p class="mt-2 text-3xl font-extrabold text-brand-600">499.000đ <span class="text-xs font-normal text-muted">/ 3 tháng</span></p>
-        <p class="mt-2 text-xs text-muted">Dành cho người tự học nâng cao từ vựng và ngữ pháp.</p>
-        <ul class="mt-6 space-y-3 text-xs">
-          <li>✓ Truy cập 100+ bài giảng video</li>
-          <li>✓ Kho bài tập ngữ pháp & từ vựng</li>
-          <li>✓ 5 đề thi thử có đáp án chi tiết</li>
-        </ul>
-        <a href="contact.html" class="btn btn-ghost mt-8">Chọn gói này</a>
-      </li>
+  <!-- BASIC -->
+  <li class="card flex h-full flex-col" data-reveal>
+    <h2 class="font-display text-lg font-bold">
+      Cơ bản (Basic)
+    </h2>
 
-      <li class="card relative flex h-full flex-col ring-2 ring-brand-600">
-        <span class="badge absolute -top-3 left-6 bg-brand-600 text-white">Được chọn nhiều nhất</span>
-        <h2 class="font-display text-lg font-bold">Chuyên sâu (Pro)</h2>
-        <p class="mt-2 text-3xl font-extrabold text-brand-600">999.000đ <span class="text-xs font-normal text-muted">/ 6 tháng</span></p>
-        <p class="mt-2 text-xs text-muted">Giải pháp toàn diện nhất để đạt mục tiêu 750+ TOEIC.</p>
-        <ul class="mt-6 space-y-3 text-xs">
-          <li>✓ Toàn bộ nội dung gói Cơ bản</li>
-          <li>✓ Luyện đề không giới hạn với AI</li>
-          <li>✓ Phân tích lỗ hổng kiến thức tự động</li>
-          <li>✓ Group hỗ trợ học tập 24/7</li>
-        </ul>
-        <a href="contact.html" class="btn btn-primary mt-8">Chọn gói này</a>
-      </li>
+    <p class="mt-2 text-3xl font-extrabold text-brand-600">
+      <span
+        data-price
+        data-monthly="499000"
+        data-yearly="1699000"
+      >
+        499.000 ₫
+      </span>
 
-      <li class="card flex h-full flex-col">
-        <h2 class="font-display text-lg font-bold">Kèm 1-1 (VIP)</h2>
-        <p class="mt-2 text-3xl font-extrabold text-brand-600">2.499.000đ <span class="text-xs font-normal text-muted">/ 6 tháng</span></p>
-        <p class="mt-2 text-xs text-muted">Cam kết đầu ra 850+ có giảng viên đồng hành trực tiếp.</p>
-        <ul class="mt-6 space-y-3 text-xs">
-          <li>✓ Toàn bộ đặc quyền gói Pro</li>
-          <li>✓ 12 buổi sửa đề trực tiếp</li>
-          <li>✓ Cam kết hoàn tiền nếu không đạt mục tiêu</li>
-        </ul>
-        <a href="contact.html" class="btn btn-ghost mt-8">Chọn gói này</a>
-      </li>
+      <span
+        class="text-xs font-normal text-muted"
+        data-period
+      >
+        / 3 tháng
+      </span>
+    </p>
+
+    <p class="mt-2 text-xs text-muted">
+      Dành cho người tự học nâng cao từ vựng và ngữ pháp.
+    </p>
+
+    <ul class="mt-6 space-y-3 text-xs">
+      <li>✓ Truy cập 100+ bài giảng video</li>
+      <li>✓ Kho bài tập ngữ pháp & từ vựng</li>
+      <li>✓ 5 đề thi thử có đáp án chi tiết</li>
     </ul>
+
+    <a href="contact.html" class="btn btn-ghost mt-8">
+      Chọn gói này
+    </a>
+  </li>
+
+
+  <!-- PRO -->
+  <li
+    class="card relative flex h-full flex-col ring-2 ring-brand-600"
+    data-reveal
+  >
+    <span
+      class="badge absolute -top-3 left-6 bg-brand-600 text-white"
+    >
+      Được chọn nhiều nhất
+    </span>
+
+    <h2 class="font-display text-lg font-bold">
+      Chuyên sâu (Pro)
+    </h2>
+
+    <p class="mt-2 text-3xl font-extrabold text-brand-600">
+      <span
+        data-price
+        data-monthly="999000"
+        data-yearly="3499000"
+      >
+        999.000 ₫
+      </span>
+
+      <span
+        class="text-xs font-normal text-muted"
+        data-period
+      >
+        / 6 tháng
+      </span>
+    </p>
+
+    <p class="mt-2 text-xs text-muted">
+      Giải pháp toàn diện nhất để đạt mục tiêu 750+ TOEIC.
+    </p>
+
+    <ul class="mt-6 space-y-3 text-xs">
+      <li>✓ Toàn bộ nội dung gói Cơ bản</li>
+      <li>✓ Luyện đề không giới hạn với AI</li>
+      <li>✓ Phân tích lỗ hổng kiến thức tự động</li>
+      <li>✓ Group hỗ trợ học tập 24/7</li>
+    </ul>
+
+    <a href="contact.html" class="btn btn-primary mt-8">
+      Chọn gói này
+    </a>
+  </li>
+
+
+  <!-- VIP -->
+  <li class="card flex h-full flex-col" data-reveal>
+    <h2 class="font-display text-lg font-bold">
+      Kèm 1-1 (VIP)
+    </h2>
+
+    <p class="mt-2 text-3xl font-extrabold text-brand-600">
+      <span
+        data-price
+        data-monthly="2499000"
+        data-yearly="8999000"
+      >
+        2.499.000 ₫
+      </span>
+
+      <span
+        class="text-xs font-normal text-muted"
+        data-period
+      >
+        / 6 tháng
+      </span>
+    </p>
+
+    <p class="mt-2 text-xs text-muted">
+      Cam kết đầu ra 850+ có giảng viên đồng hành trực tiếp.
+    </p>
+
+    <ul class="mt-6 space-y-3 text-xs">
+      <li>✓ Toàn bộ đặc quyền gói Pro</li>
+      <li>✓ 12 buổi sửa đề trực tiếp</li>
+      <li>✓ Cam kết hoàn tiền nếu không đạt mục tiêu</li>
+    </ul>
+
+    <a href="contact.html" class="btn btn-ghost mt-8">
+      Chọn gói này
+    </a>
+  </li>
+</ul>
   </section>
 
+<section  class="section">
   <section class="section pt-0">
     <h2 class="font-display text-3xl font-bold">So sánh tính năng</h2>
     <p class="mt-2 text-sm text-muted lg:hidden">Vuốt ngang để xem hết bảng.</p>
@@ -145,6 +262,8 @@
     </div>
   </section>
 
+
+  
   <section id="faq" class="section">
   <div class="max-w-3xl mx-auto">
     <h2 class="text-3xl font-bold text-ink mb-8">
