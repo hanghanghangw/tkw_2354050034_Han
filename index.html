@@ -5,7 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>TOEIC Mastery</title>
+    <script>
+    (function () {
+      const saved = localStorage.getItem("theme");
 
+      const dark = saved
+        ? saved === "dark"
+        : window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+      document.documentElement.classList.toggle("dark", dark);
+    })();
+  </script>
     <link rel="stylesheet" href="/src/input.css" />
     
   </head>
@@ -37,6 +47,20 @@
     >
       ☰
     </button>
+    <button
+  type="button"
+  data-theme-toggle
+  class="h-10 w-10 rounded-full border border-line
+         bg-surface text-ink
+         flex items-center justify-center
+         hover:bg-surface-alt
+         focus:outline-none
+         focus:ring-2 focus:ring-brand-600"
+  aria-label="Chuyển sang chế độ tối"
+  aria-pressed="false"
+>
+  ◐
+</button>
   </nav>
 
   <div
@@ -50,7 +74,9 @@
       <a href="./index.html#faq">FAQ</a>
       <a href="./contact.html">Contact</a>
     </nav>
+    
   </div>
+  
 </header>
 
     <!-- ================= HERO ================= -->

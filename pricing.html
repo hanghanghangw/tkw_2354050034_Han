@@ -5,8 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bảng giá | TOEIC Mastery</title>
   <link rel="stylesheet" href="/src/input.css" />
-  <script type="module" src="./js/main.js"></script>
-</head>
+<script>
+    (function () {
+      const saved = localStorage.getItem("theme");
+
+      const dark = saved
+        ? saved === "dark"
+        : window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+      document.documentElement.classList.toggle("dark", dark);
+    })();
+  </script></head>
 <body class="font-body bg-surface text-ink">
       <div id="nav-sentinel" aria-hidden="true"></div>
 
@@ -34,6 +43,20 @@
     >
       ☰
     </button>
+     <button
+  type="button"
+  data-theme-toggle
+  class="h-10 w-10 rounded-full border border-line
+         bg-surface text-ink
+         flex items-center justify-center
+         hover:bg-surface-alt
+         focus:outline-none
+         focus:ring-2 focus:ring-brand-600"
+  aria-label="Chuyển sang chế độ tối"
+  aria-pressed="false"
+>
+  ◐
+</button>
   </nav>
 
   <div
