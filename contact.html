@@ -8,28 +8,46 @@
   <script type="module" src="./js/main.js"></script>
 </head>
 <body class="font-body bg-surface text-ink">
-<header class="w-full bg-surface border-b border-line">
-  <nav class="max-w-[1366px] mx-auto px-[24px] lg:px-[50px] h-[72px] flex items-center justify-between" aria-label="Điều hướng chính">
-    <a href="index.html" class="flex items-center gap-[10px] font-bold text-[20px]">
-      <span class="w-[30px] h-[30px] rounded-[8px] bg-brand-600 flex items-center justify-center text-white">T</span>
-      TOEIC<span class="text-brand-600">Mastery</span>
+<div id="nav-sentinel" aria-hidden="true"></div>
+
+<header class="w-full bg-surface">
+  <nav class="max-w-[1366px] mx-auto px-[24px] lg:px-[50px] h-[72px] flex items-center justify-between">
+    <a href="./index.html" class="font-bold text-[20px]">
+      TOEIC Mastery
     </a>
 
-    <div class="hidden lg:flex items-center gap-[28px] text-[14px] font-medium text-ink">
-      <a href="index.html#courses" class="hover:text-brand-600 transition">Courses</a>
-      <a href="index.html#why-us" class="hover:text-brand-600 transition">Why us</a>
-      <a href="pricing.html" class="hover:text-brand-600 transition">Pricing</a>
-      <a href="contact.html" class="hover:text-brand-600 transition">Contact</a>
-      <a href="index.html#faq" class="hover:text-brand-600 transition">FAQ</a>
+    <div class="hidden lg:flex items-center gap-[28px]">
+      <a href="./index.html#courses">Courses</a>
+      <a href="./index.html#features">Why us</a>
+      <a href="./pricing.html">Pricing</a>
+      <a href="./index.html#faq">FAQ</a>
+      <a href="./contact.html">Contact</a>
     </div>
 
-    <div class="hidden lg:flex items-center gap-[18px]">
-      <button class="text-[14px] font-medium text-ink hover:text-brand-600 transition">Log in</button>
-      <a href="index.html#courses" class="btn btn-primary">Start learning</a>
-    </div>
-
-    <button class="lg:hidden text-ink text-[24px]" aria-label="Open menu">☰</button>
+    <button
+      id="menu-toggle"
+      type="button"
+      class="lg:hidden text-[24px]"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+      aria-label="Mở menu"
+    >
+      ☰
+    </button>
   </nav>
+
+  <div
+    id="mobile-menu"
+    class="hidden lg:hidden border-t border-line bg-surface"
+  >
+    <nav class="flex flex-col gap-4 px-6 py-5" aria-label="Menu mobile">
+      <a href="./index.html#courses">Courses</a>
+      <a href="./index.html#features">Why us</a>
+      <a href="./pricing.html">Pricing</a>
+      <a href="./index.html#faq">FAQ</a>
+      <a href="./contact.html">Contact</a>
+    </nav>
+  </div>
 </header>
 <main>
   <section class="section">
@@ -201,5 +219,18 @@
     </div>
   </div>
 </footer>
+<!-- Nút lên đầu trang -->
+  <button
+    id="to-top"
+    type="button"
+    class="hidden fixed bottom-6 right-6 z-50 h-11 w-11 rounded-full
+           bg-brand-600 text-white shadow-md"
+    aria-label="Lên đầu trang"
+    aria-hidden="true"
+  >
+    ↑
+  </button>
+  <script type="module" src="./js/main.js"></script>
+
 </body>
 </html>

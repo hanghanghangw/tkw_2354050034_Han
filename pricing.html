@@ -8,28 +8,46 @@
   <script type="module" src="./js/main.js"></script>
 </head>
 <body class="font-body bg-surface text-ink">
-<header class="w-full bg-surface border-b border-line">
-  <nav class="max-w-[1366px] mx-auto px-[24px] lg:px-[50px] h-[72px] flex items-center justify-between" aria-label="Điều hướng chính">
-    <a href="index.html" class="flex items-center gap-[10px] font-bold text-[20px]">
-      <span class="w-[30px] h-[30px] rounded-[8px] bg-brand-600 flex items-center justify-center text-white">T</span>
-      TOEIC<span class="text-brand-600">Mastery</span>
+      <div id="nav-sentinel" aria-hidden="true"></div>
+
+<header class="w-full bg-surface">
+  <nav class="max-w-[1366px] mx-auto px-[24px] lg:px-[50px] h-[72px] flex items-center justify-between">
+    <a href="./index.html" class="font-bold text-[20px]">
+      TOEIC Mastery
     </a>
 
-    <div class="hidden lg:flex items-center gap-[28px] text-[14px] font-medium text-ink">
-      <a href="index.html#courses" class="hover:text-brand-600 transition">Courses</a>
-      <a href="index.html#why-us" class="hover:text-brand-600 transition">Why us</a>
-      <a href="pricing.html" class="hover:text-brand-600 transition">Pricing</a>
-      <a href="contact.html" class="hover:text-brand-600 transition">Contact</a>
-      <a href="index.html#faq" class="hover:text-brand-600 transition">FAQ</a>
+    <div class="hidden lg:flex items-center gap-[28px]">
+      <a href="./index.html#courses">Courses</a>
+      <a href="./index.html#features">Why us</a>
+      <a href="./pricing.html">Pricing</a>
+      <a href="./index.html#faq">FAQ</a>
+      <a href="./contact.html">Contact</a>
     </div>
 
-    <div class="hidden lg:flex items-center gap-[18px]">
-      <button class="text-[14px] font-medium text-ink hover:text-brand-600 transition">Log in</button>
-      <a href="index.html#courses" class="btn btn-primary">Start learning</a>
-    </div>
-
-    <button class="lg:hidden text-ink text-[24px]" aria-label="Open menu">☰</button>
+    <button
+      id="menu-toggle"
+      type="button"
+      class="lg:hidden text-[24px]"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+      aria-label="Mở menu"
+    >
+      ☰
+    </button>
   </nav>
+
+  <div
+    id="mobile-menu"
+    class="hidden lg:hidden border-t border-line bg-surface"
+  >
+    <nav class="flex flex-col gap-4 px-6 py-5" aria-label="Menu mobile">
+      <a href="./index.html#courses">Courses</a>
+      <a href="./index.html#features">Why us</a>
+      <a href="./pricing.html">Pricing</a>
+      <a href="./index.html#faq">FAQ</a>
+      <a href="./contact.html">Contact</a>
+    </nav>
+  </div>
 </header>
 <main>
   <section class="section">
@@ -104,22 +122,87 @@
     </div>
   </section>
 
-  <section class="section pt-0">
-    <div class="mx-auto max-w-3xl">
-      <span class="eyebrow">Thanh toán</span>
-      <h2 class="mt-2 font-display text-3xl font-bold">Câu hỏi thường gặp</h2>
-      <div class="mt-6 space-y-3">
-        <details class="card p-4" open>
-          <summary class="cursor-pointer font-semibold">Có thể thanh toán bằng phương thức nào?</summary>
-          <p class="mt-3 text-sm text-muted">Hỗ trợ chuyển khoản QR, MoMo, VNPay và thẻ ATM/Visa/Mastercard.</p>
-        </details>
-        <details class="card p-4">
-          <summary class="cursor-pointer font-semibold">Có chính sách hoàn tiền không?</summary>
-          <p class="mt-3 text-sm text-muted">Điều kiện hoàn tiền phụ thuộc gói học và chính sách áp dụng tại thời điểm đăng ký.</p>
-        </details>
+  <section id="faq" class="section">
+  <div class="max-w-3xl mx-auto">
+    <h2 class="text-3xl font-bold text-ink mb-8">
+      Frequently Asked Questions
+    </h2>
+
+    <div class="space-y-4">
+
+      <div class="card">
+        <button
+          type="button"
+          class="w-full flex items-center justify-between gap-4 text-left"
+          data-faq-button
+          aria-expanded="false"
+          aria-controls="faq-panel-1"
+        >
+          <span class="font-semibold text-ink">
+            Khóa học TOEIC phù hợp với ai?
+          </span>
+
+          <span aria-hidden="true">+</span>
+        </button>
+
+        <div
+          id="faq-panel-1"
+          class="hidden mt-4 text-muted"
+        >
+          Khóa học phù hợp với người muốn cải thiện điểm TOEIC
+          từ cơ bản đến nâng cao.
+        </div>
       </div>
+
+      <div class="card">
+        <button
+          type="button"
+          class="w-full flex items-center justify-between gap-4 text-left"
+          data-faq-button
+          aria-expanded="false"
+          aria-controls="faq-panel-2"
+        >
+          <span class="font-semibold text-ink">
+            Tôi có thể học online không?
+          </span>
+
+          <span aria-hidden="true">+</span>
+        </button>
+
+        <div
+          id="faq-panel-2"
+          class="hidden mt-4 text-muted"
+        >
+          Có. Bạn có thể học trực tuyến theo lịch phù hợp.
+        </div>
+      </div>
+
+      <div class="card">
+        <button
+          type="button"
+          class="w-full flex items-center justify-between gap-4 text-left"
+          data-faq-button
+          aria-expanded="false"
+          aria-controls="faq-panel-3"
+        >
+          <span class="font-semibold text-ink">
+            Khóa học kéo dài bao lâu?
+          </span>
+
+          <span aria-hidden="true">+</span>
+        </button>
+
+        <div
+          id="faq-panel-3"
+          class="hidden mt-4 text-muted"
+        >
+          Thời lượng phụ thuộc vào khóa học và mục tiêu điểm số.
+        </div>
+      </div>
+
     </div>
-  </section>
+  </div>
+</section>
 </main>
 <footer class="bg-surface border-t border-line pt-14 sm:pt-16 lg:pt-20 pb-8">
   <div class="mx-auto w-full max-w-6xl px-5">
@@ -166,5 +249,17 @@
     </div>
   </div>
 </footer>
+<!-- Nút lên đầu trang -->
+  <button
+    id="to-top"
+    type="button"
+    class="hidden fixed bottom-6 right-6 z-50 h-11 w-11 rounded-full
+           bg-brand-600 text-white shadow-md"
+    aria-label="Lên đầu trang"
+    aria-hidden="true"
+  >
+    ↑
+  </button>
+  <script type="module" src="./js/main.js"></script>
 </body>
 </html>
