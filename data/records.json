@@ -1,0 +1,29 @@
+[
+  {
+    "id": "REG-001",
+    "student": "Nguyễn Minh Anh",
+    "course": "TOEIC Foundation",
+    "status": "active",
+    "score": 450,
+    "amount": 499000,
+    "date": "2026-08-01"
+  },
+  {
+    "id": "REG-002",
+    "student": "Trần Quốc Bảo",
+    "course": "TOEIC Intensive",
+    "status": "completed",
+    "score": 820,
+    "amount": 999000,
+    "date": "2026-08-05"
+  },
+  {
+    "id": "REG-003",
+    "student": "Lê Thảo Vy",
+    "course": "TOEIC Foundation",
+    "status": "active",
+    "score": 520,
+    "amount": 499000,
+    "date": "2026-08-10"
+  }
+]
