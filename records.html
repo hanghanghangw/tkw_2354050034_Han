@@ -149,6 +149,7 @@
 
     <!-- ================= MAIN ================= -->
     <main>
+        
       <section
         class="section"
         aria-labelledby="records-title"
@@ -176,6 +177,81 @@
             Theo dõi thông tin đăng ký khóa học tại TOEIC Mastery.
           </p>
         </div>
+
+<div
+  class="mb-6 grid gap-4 md:grid-cols-3"
+>
+  <!-- Search -->
+  <div>
+    <label
+      for="record-search"
+      class="field-label"
+    >
+      Tìm học viên
+    </label>
+
+    <input
+      id="record-search"
+      type="search"
+      class="field-input"
+      placeholder="Nhập tên học viên..."
+    />
+  </div>
+
+  <!-- Course -->
+  <div>
+    <label
+      for="course-filter"
+      class="field-label"
+    >
+      Khóa học
+    </label>
+
+    <select
+      id="course-filter"
+      class="field-input"
+    >
+      <option value="all">
+        Tất cả khóa học
+      </option>
+
+      <option value="TOEIC Foundation">
+        TOEIC Foundation
+      </option>
+
+      <option value="TOEIC Intensive">
+        TOEIC Intensive
+      </option>
+    </select>
+  </div>
+
+  <!-- Sort -->
+  <div>
+    <label
+      for="record-sort"
+      class="field-label"
+    >
+      Sắp xếp
+    </label>
+
+    <select
+      id="record-sort"
+      class="field-input"
+    >
+      <option value="date-desc">
+        Mới nhất
+      </option>
+
+      <option value="score-desc">
+        Điểm cao nhất
+      </option>
+
+      <option value="amount-desc">
+        Học phí cao nhất
+      </option>
+    </select>
+  </div>
+</div>
 
         <!-- ================= LOADING ================= -->
         <div
@@ -270,7 +346,9 @@
             ></tbody>
           </table>
         </div>
+  
 
+        
         <!-- ================= TEMPLATE ================= -->
         <!-- Template không hiển thị trực tiếp -->
         <template id="record-template">

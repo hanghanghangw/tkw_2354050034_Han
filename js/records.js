@@ -103,12 +103,71 @@ function render() {
   }
 
   // Có dữ liệu
-  const rows =
-    state.records.map(buildRow);
+    const records = visibleRecords();
+    if (records.length === 0) {
+  empty.classList.remove("hidden");
+  return;
+}
+const rows = records.map(buildRow);
+
+tbody.replaceChildren(...rows);
+
+content.classList.remove("hidden");
 
   tbody.replaceChildren(...rows);
 
   content.classList.remove("hidden");
+}
+
+function debounce(fn, delay = 300) {
+  let id;
+
+  return (...args) => {
+    clearTimeout(id);
+
+    id = setTimeout(() => {
+      fn(...args);
+    }, delay);
+  };
+}
+
+const sorters = {
+  "date-desc": (a, b) =>
+    b.date.localeCompare(a.date),
+
+  "score-desc": (a, b) =>
+    b.score - a.score,
+
+  "amount-desc": (a, b) =>
+    b.amount - a.amount,
+};
+
+function visibleRecords() {
+  const query =
+    state.query.trim().toLowerCase();
+
+  return state.records
+    .filter((record) => {
+      return (
+        state.course === "all" ||
+        record.course === state.course
+      );
+    })
+    .filter((record) => {
+      return (
+        state.status === "all" ||
+        record.status === state.status
+      );
+    })
+    .filter((record) => {
+      return (
+        !query ||
+        record.student
+          .toLowerCase()
+          .includes(query)
+      );
+    })
+    .sort(sorters[state.sort]);
 }
 
 export async function initRecords() {
@@ -117,11 +176,68 @@ export async function initRecords() {
 
   if (!root) return;
 
+  const searchInput =
+    document.getElementById("record-search");
+
+  const courseFilter =
+    document.getElementById("course-filter");
+
+  const statusFilter =
+    document.getElementById("status-filter");
+
+  const sortSelect =
+    document.getElementById("record-sort");
+
+  // ================= SEARCH =================
+  if (searchInput) {
+    searchInput.addEventListener(
+      "input",
+      debounce((event) => {
+        state.query = event.target.value;
+        render();
+      }, 300)
+    );
+  }
+
+  // ================= FILTER COURSE =================
+  if (courseFilter) {
+    courseFilter.addEventListener(
+      "change",
+      (event) => {
+        state.course = event.target.value;
+        render();
+      }
+    );
+  }
+
+  // ================= FILTER STATUS =================
+  if (statusFilter) {
+    statusFilter.addEventListener(
+      "change",
+      (event) => {
+        state.status = event.target.value;
+        render();
+      }
+    );
+  }
+
+  // ================= SORT =================
+  if (sortSelect) {
+    sortSelect.addEventListener(
+      "change",
+      (event) => {
+        state.sort = event.target.value;
+        render();
+      }
+    );
+  }
+
+  // ================= LOADING =================
   render();
 
+  // ================= LOAD DATA =================
   try {
-    state.records =
-      await loadRecords();
+    state.records = await loadRecords();
   } catch (error) {
     state.error =
       `Không tải được dữ liệu: ${error.message}`;
@@ -130,3 +246,4 @@ export async function initRecords() {
     render();
   }
 }
+
