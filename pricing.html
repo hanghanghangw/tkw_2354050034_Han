@@ -20,13 +20,14 @@
 <body class="font-body bg-surface text-ink">
       <div id="nav-sentinel" aria-hidden="true"></div>
 
-<header class="w-full bg-surface">
+<header class="w-full bg-brand-700 text-white">
   <nav class="max-w-[1366px] mx-auto px-[24px] lg:px-[50px] h-[72px] flex items-center justify-between">
     <a href="./index.html" class="font-bold text-[20px]">
       TOEIC Mastery
     </a>
 
     <div class="hidden lg:flex items-center gap-[28px]">
+      <a href="./index.html">Home</a>
       <a href="./index.html#courses">Courses</a>
       <a href="./index.html#features">Why us</a>
       <a href="./pricing.html">Pricing</a>
@@ -37,39 +38,53 @@
     <button
       id="menu-toggle"
       type="button"
-      class="lg:hidden text-[24px]"
+      class="text-[24px] text-white lg:hidden"
       aria-expanded="false"
       aria-controls="mobile-menu"
       aria-label="Mở menu"
     >
       ☰
     </button>
-     <button
-  type="button"
-  data-theme-toggle
-  class="h-10 w-10 rounded-full border border-line
-         bg-surface text-ink
-         flex items-center justify-center
-         hover:bg-surface-alt
-         focus:outline-none
-         focus:ring-2 focus:ring-brand-600"
-  aria-label="Chuyển sang chế độ tối"
-  aria-pressed="false"
->
-  ◐
-</button>
+    <div class="flex items-center gap-3">
+      <div data-auth-guest class="flex items-center gap-3">
+        <a href="./login.html" class="rounded-card bg-white px-4 py-2 text-sm font-semibold text-brand-700 hover:bg-brand-50">Login</a>
+        <a href="./register.html" class="hidden rounded-card border border-white/70 px-4 py-2 text-sm font-semibold text-white hover:bg-white/10 sm:inline-flex">Sign up</a>
+      </div>
+      <div data-auth-user class="hidden flex items-center gap-3">
+        <a href="./profile.html" class="font-semibold text-white hover:underline" data-auth-user-name></a>
+        <button type="button" data-auth-logout class="rounded-card bg-white px-4 py-2 text-sm font-semibold text-brand-700 hover:bg-brand-50">Log out</button>
+      </div>
+      <button
+        type="button"
+        data-theme-toggle
+        class="flex h-10 w-10 items-center justify-center rounded-full border border-white/70 bg-white text-brand-700 hover:bg-brand-50 focus:outline-none focus:ring-2 focus:ring-white"
+        aria-label="Chuyển sang chế độ tối"
+        aria-pressed="false"
+      >
+        ◐
+      </button>
+    </div>
   </nav>
 
   <div
     id="mobile-menu"
-    class="hidden lg:hidden border-t border-line bg-surface"
+    class="hidden border-t border-white/20 bg-brand-700 text-white lg:hidden"
   >
     <nav class="flex flex-col gap-4 px-6 py-5" aria-label="Menu mobile">
+      <a href="./index.html">Home</a>
       <a href="./index.html#courses">Courses</a>
       <a href="./index.html#features">Why us</a>
       <a href="./pricing.html">Pricing</a>
       <a href="./index.html#faq">FAQ</a>
       <a href="./contact.html">Contact</a>
+      <div data-auth-guest class="flex flex-col items-start gap-4">
+        <a href="./login.html" class="w-fit rounded-card bg-white px-4 py-2 text-sm font-semibold text-brand-700">Login</a>
+        <a href="./register.html" class="w-fit rounded-card border border-white/70 px-4 py-2 text-sm font-semibold text-white hover:bg-white/10">Sign up</a>
+      </div>
+      <div data-auth-user class="hidden flex flex-col items-start gap-4">
+        <a href="./profile.html" class="font-semibold text-white hover:underline" data-auth-user-name></a>
+        <button type="button" data-auth-logout class="w-fit rounded-card bg-white px-4 py-2 text-sm font-semibold text-brand-700">Log out</button>
+      </div>
     </nav>
   </div>
 </header>
